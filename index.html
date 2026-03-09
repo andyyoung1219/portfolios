@@ -104,8 +104,8 @@
 
         /* 專案網格 */
         .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: flex;
+            flex-direction: column;
             gap: 30px;
         }
         .project-card {
@@ -166,7 +166,7 @@
 
     <header>
         <nav>
-            <div style="font-weight: bold; font-size: 1.2rem;">我的作品集</div>
+            <div style="font-weight: bold; font-size: 1.2rem;">安迪作品集</div>
             <ul>
                 <li><a href="#about">關於我</a></li>
                 <li><a href="#projects">專案經歷</a></li>
@@ -176,55 +176,123 @@
     </header>
 
     <section class="hero" id="about">
-        <h1>你好，我是楊智皓</h1>
-        <p>熱衷於機器學習、電腦視覺與行動應用開發，致力於將 AI 模型落地應用於解決實際問題。</p>
+        <h1>您好，我是楊智皓</h1>
+        <h3>目前就讀國立臺北大學 資訊工程學系 三年級</h3>
     </section>
 
     <section>
-        <h2>技術專業</h2>
+        <h2>技術應用</h2>
         <div class="skills-container">
             <span class="skill-tag">Python</span>
             <span class="skill-tag">C++</span>
             <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Embedded System</span>
+            <span class="skill-tag">Deep / Machine Learning</span>
             <span class="skill-tag">Computer Vision</span>
-            <span class="skill-tag">Machine Learning</span>
-            <span class="skill-tag">YOLO / RT-DETR</span>
         </div>
     </section>
 
     <section id="projects">
-        <h2>精選專案</h2>
+        <h2>專案經歷</h2>
         <div class="projects-grid">
             
             <div class="project-card">
-                <h3>機車安全輔助系統 (MSAS)</h3>
-                <p>一套專為機車騎士設計的安全系統。整合了邊緣運算設備進行影像辨識，並即時將道路安全警示推播至騎士的手機中。</p>
-                <div class="project-tech">技術棧：Flutter, Jetson</div>
-                <a href="#">查看 GitHub Repo →</a>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px;">
+                    <h3 style="margin-bottom: 0;">摩托車安全輔助系統</h3>
+                    <span style="color: #666; font-size: 0.9rem;">2025/6~2025/9</span>
+                </div>
+
+                <p style="margin-bottom: 10px;"><strong>專案定位：</strong>結合邊緣運算與行動應用的「伴隨式」導航安全整合方案。</p>
+                <p style="margin-bottom: 15px;"><strong>核心理念：</strong>在不改變使用者原導航習慣下，透過背景運行的 Flutter App 結合 Jetson TX2 邊緣運算，即時疊加環境偵測警示，提升騎乘安全性。</p>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong style="color: #333; font-size: 1rem;">技術棧 (Technology Stack)</strong>
+                    <ul style="margin-top: 8px; padding-left: 20px; color: #666; font-size: 0.95rem; line-height: 1.6;">
+                        <li><strong>行動端 (Mobile):</strong> Flutter, Dart, Google Maps API, Google Directions/Geocoding API.</li>
+                        <li><strong>硬體與嵌入式 (Embedded):</strong> NVIDIA Jetson TX2, LED, Threading, TFMini-S LiDAR, Python.</li>
+                        <li><strong>通訊與介面:</strong> Bluetooth SPP (Serial Port Profile), OpenCV 4.5.0, Flutter Overlay Window (懸浮視窗).</li>
+                        <li><strong>模型：</strong> YOLOv11</li>
+                    </ul>
+                </div>
+
+                <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">參與2025全國大專校院智慧創新暨跨域整合創作競賽</p>
+                
+                <a href="https://drive.google.com/file/d/1EOj0M2uCLQ0XUI0pBTJ7t1hv_ZR8g9AK/view" target="_blank">作品展示連結 →</a>
             </div>
 
             <div class="project-card">
-                <h3>智慧衝浪海域分析系統</h3>
-                <p>應用深度學習進行海況分析的系統。能夠精準偵測海浪狀況並進行場域分割，為衝浪愛好者提供安全與環境數據評估。</p>
-                <div class="project-tech">技術棧：RT-DETR, 電腦視覺</div>
-                <a href="#">查看詳細介紹 →</a>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px;">
+                    <h3 style="margin-bottom: 0;">智慧衝浪海域分析系統</h3>
+                    <span style="color: #666; font-size: 0.9rem;">2025/9~仍在進行</span>
+                </div>
+                
+                <p style="margin-bottom: 10px;"><strong>專案定位：</strong>結合電腦視覺與單目幾何估測的智慧海浪分析方案，透過影像自動化偵測與量化模型，提供區域級浪況判讀與決策輔助。</p>
+                <p style="margin-bottom: 15px;"><strong>核心理念：</strong>以單一固定式攝影機為輸入來源，整合深度學習偵測、紋理分類與物理幾何推導，將傳統仰賴人工經驗的浪況判讀轉化為可量化、可視覺化的客觀指標，減少衝浪的事前準備時間以及讓衝浪人士依據不同浪況選擇浪板。</p>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong style="color: #333; font-size: 1rem;">技術棧 (Technology Stack)</strong>
+                    <ul style="margin-top: 8px; padding-left: 20px; color: #666; font-size: 0.95rem; line-height: 1.6;">
+                        <li><strong>物件偵測與追蹤：</strong>RT-DETR、Multi-Object Tracking</li>
+                        <li><strong>影像處理與分類：</strong>OpenCV、SVC (Polynomial Kernel)、ThunderSVM</li>
+                        <li><strong>深度與幾何估測：</strong>單目視覺幾何推導、相機姿態修正</li>
+                    </ul>
+                </div>
+
+                <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">專題製作</p>
+                
+                <a>專題尚在製作</a>
             </div>
 
             <div class="project-card">
-                <h3>AI 語音問答助理</h3>
-                <p>一款整合人工智慧的行動應用程式，提供流暢的即時語音互動與解答功能，優化使用者獲取資訊的體驗。</p>
-                <div class="project-tech">技術棧：Mobile App, AI API</div>
-                <a href="#">下載/展示連結 →</a>
-            </div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px;">
+                    <h3 style="margin-bottom: 0;">AI問答助理</h3>
+                    <span style="color: #666; font-size: 0.9rem;">2025/4~2025/6</span>
+                </div>
+                
+                <p style="margin-bottom: 10px;"><strong>專案定位：</strong>基於行動端與雲端 AI 整合的智慧對話系統，結合語音辨識與大型語言模型，打造即時互動式問答平台。</p>
+                <p style="margin-bottom: 15px;"><strong>核心理念：</strong>透過 Flutter 跨平台應用結合 TCP 伺服器架構，整合語音輸入、語音輸出與雲端 LLM 服務。</p>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong style="color: #333; font-size: 1rem;">技術棧 (Technology Stack)</strong>
+                    <ul style="margin-top: 8px; padding-left: 20px; color: #666; font-size: 0.95rem; line-height: 1.6;">
+                        <li><strong>行動端 (Mobile)：</strong>Flutter、Dart</li>
+                        <li><strong>伺服器端 (Server)：</strong>Dart TCP Server、HTTPS</li>
+                        <li><strong>API：</strong>Groq API</li>
+                        <li><strong>通訊架構：</strong>TCP Socket 通訊、Client-Server 架構</li>
+                    </ul>
+                </div>
 
-        </div>
+                <a href="https://drive.google.com/file/d/14Ai0d8TJOXYq49Kpt0e-Hpw5b19LM4pi/view" target="_blank">作品展示連結 →</a>
+            </div>
+            <div class="project-card">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px;">
+                    <h3 style="margin-bottom: 0;">即時交通速限辨識與語音輔助系統</h3>
+                    <span style="color: #666; font-size: 0.9rem;">2025/10~2025/12</span>
+                </div>
+
+                <p style="margin-bottom: 10px;"><strong>專案定位：</strong>結合邊緣運算與行動裝置的「智慧駕駛輔助」系統。</p>
+                <p style="margin-bottom: 15px;"><strong>核心理念：</strong>透過部署於樹莓派的 YOLO 視覺辨識模型，即時偵測道路速限標誌，並利用低功耗藍牙（BLE）將數據推播至 Flutter App，提供視覺化儀表與 TTS 語音提醒，確保駕駛行車安全。</p>
+                
+                <div style="margin-bottom: 20px;">
+                    <strong style="color: #333; font-size: 1rem;">技術棧 (Technology Stack)</strong>
+                    <ul style="margin-top: 8px; padding-left: 20px; color: #666; font-size: 0.95rem; line-height: 1.6;">
+                        <li><strong>行動端 (Mobile):</strong> Flutter, Dart, FlutterTts</li>
+                        <li><strong>硬體與嵌入式 (Embedded):</strong> Raspberry Pi, multi-thread, OpenCV, python</li>
+                        <li><strong>通訊與介面:</strong> BlueZ, DBus</li>
+                        <li><strong>模型:</strong> YOLOv8 (ONNX)</li>
+                    </ul>
+                </div>
+
+                <a href="https://drive.google.com/file/d/1LbbQQx0Iv7OCLEKB8GEcp9v1pJ_5335z/view" target="_blank">作品展示連結 →</a>
+            </div>
+        </div> 
     </section>
 
     <section class="contact" id="contact">
         <h2>聯絡我</h2>
-        <p>目前正在尋找軟體開發與 AI 相關的工作機會。如果你對我的經歷感興趣，歡迎隨時與我聯繫！</p>
+        <p>目前正在尋找軟體開發與 AI / ML 相關的實習機會。如果您對我的經歷感興趣，歡迎隨時與我聯繫！</p>
         <br>
-        <p>Email: <a href="mailto:your.email@example.com">andyyoung1219@gmail.com</a></p>
+        <p>Email: <a href="mailto:andyyoung1219@gmail.com">andyyoung1219@gmail.com</a></p>
     </section>
 
 </body>
