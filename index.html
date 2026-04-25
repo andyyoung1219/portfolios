@@ -4,169 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>個人作品集</title>
-    <style>
-        /* 全局與重置設定 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9fafc;
-            color: #333;
-            line-height: 1.6;
-        }
-        a {
-            text-decoration: none;
-            color: #007bff;
-        }
-        a:hover {
-            color: #0056b3;
-        }
-        
-        /* 導覽列 */
-        header {
-            background: #ffffff;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        /* 區塊通用設定 */
-        section {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-
-        /* 歡迎區塊 (Hero) */
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border-radius: 12px;
-            margin-top: 40px;
-        }
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            color: #555;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* 技能標籤 */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill-tag {
-            background-color: #e1f0fa;
-            color: #0056b3;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
-        }
-        .skill-tag:hover {
-            background-color: #cce4f7;
-        }
-
-        /* 專案網格 */
-        .projects-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        .project-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #eee;
-        }
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
-        }
-        .project-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: #34495e;
-        }
-        .project-card p {
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 0.95rem;
-        }
-        .project-tech {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 15px;
-        }
-
-        /* 聯絡資訊 */
-        .contact {
-            text-align: center;
-            background: #2c3e50;
-            color: #fff;
-            padding: 60px 20px;
-            border-radius: 12px;
-            margin-bottom: 40px;
-        }
-        .contact h2 {
-            border-color: #fff;
-            color: #fff;
-        }
-        .contact a {
-            color: #3498db;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        /* 手機版響應式設計 */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2.2rem; }
-            nav { flex-direction: column; gap: 10px; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <nav>
-            <div style="font-weight: bold; font-size: 1.2rem;">安迪作品集</div>
+            <div class="logo">安迪作品集</div>
             <ul>
                 <li><a href="#about">關於我</a></li>
                 <li><a href="#projects">專案經歷</a></li>
@@ -195,19 +38,18 @@
     <section id="projects">
         <h2>專案經歷</h2>
         <div class="projects-grid">
-            
             <div class="project-card">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px;">
-                    <h3 style="margin-bottom: 0;">摩托車安全輔助系統</h3>
-                    <span style="color: #666; font-size: 0.9rem;">2025/6~2025/9</span>
+                <div class="project-header">
+                    <h3>摩托車安全輔助系統</h3>
+                    <span>2025/6~2025/9</span>
                 </div>
 
-                <p style="margin-bottom: 10px;"><strong>專案定位：</strong>結合邊緣運算與行動應用的「伴隨式」導航安全整合方案。</p>
-                <p style="margin-bottom: 15px;"><strong>核心理念：</strong>在不改變使用者原導航習慣下，透過背景運行的 Flutter App 結合 Jetson TX2 邊緣運算，即時疊加環境偵測警示，提升騎乘安全性。</p>
+                <p><strong>專案定位：</strong>結合邊緣運算與行動應用的「伴隨式」導航安全整合方案。</p>
+                <p><strong>核心理念：</strong>在不改變使用者原導航習慣下，透過背景運行的 Flutter App 結合 Jetson TX2 邊緣運算，即時疊加環境偵測警示，提升騎乘安全性。</p>
                 
-                <div style="margin-bottom: 20px;">
-                    <strong style="color: #333; font-size: 1rem;">技術棧 (Technology Stack)</strong>
-                    <ul style="margin-top: 8px; padding-left: 20px; color: #666; font-size: 0.95rem; line-height: 1.6;">
+                <div class="tech-stack">
+                    <strong>技術棧 (Technology Stack)</strong>
+                    <ul>
                         <li><strong>行動端 (Mobile):</strong> Flutter, Dart, Google Maps API, Google Directions/Geocoding API.</li>
                         <li><strong>硬體與嵌入式 (Embedded):</strong> NVIDIA Jetson TX2, LED, Threading, TFMini-S LiDAR, Python.</li>
                         <li><strong>通訊與介面:</strong> Bluetooth SPP (Serial Port Profile), OpenCV 4.5.0, Flutter Overlay Window (懸浮視窗).</li>
@@ -215,9 +57,9 @@
                     </ul>
                 </div>
 
-                <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">參與2025全國大專校院智慧創新暨跨域整合創作競賽</p>
+                <p class="note">參與2025全國大專校院智慧創新暨跨域整合創作競賽</p>
                 
-                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div class="project-links">
                     <a href="https://github.com/andyyoung1219/motorcycle_safety" target="_blank">GitHub (手機端) →</a>
                     <a href="https://github.com/andyyoung1219/TX2_motorSafe" target="_blank">GitHub (嵌入式系統端) →</a>
                     <a href="https://drive.google.com/file/d/1EOj0M2uCLQ0XUI0pBTJ7t1hv_ZR8g9AK/view" target="_blank">作品展示連結 →</a>
@@ -225,40 +67,39 @@
             </div>
 
             <div class="project-card">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px;">
-                    <h3 style="margin-bottom: 0;">智慧衝浪海域分析系統</h3>
-                    <span style="color: #666; font-size: 0.9rem;">2025/9~仍在進行</span>
+                <div class="project-header">
+                    <h3>智慧衝浪海域分析系統</h3>
+                    <span>2025/9~仍在進行</span>
                 </div>
                 
-                <p style="margin-bottom: 10px;"><strong>專案定位：</strong>結合電腦視覺與單目幾何估測的智慧海浪分析方案，透過影像自動化偵測與量化模型，提供區域級浪況判讀與決策輔助。</p>
-                <p style="margin-bottom: 15px;"><strong>核心理念：</strong>以單一固定式攝影機為輸入來源，整合深度學習偵測、紋理分類與物理幾何推導，將傳統仰賴人工經驗的浪況判讀轉化為可量化、可視覺化的客觀指標，減少衝浪的事前準備時間以及讓衝浪人士依據不同浪況選擇浪板。</p>
+                <p><strong>專案定位：</strong>結合電腦視覺與單目幾何估測的智慧海浪分析方案，透過影像自動化偵測與量化模型，提供區域級浪況判讀與決策輔助。</p>
+                <p><strong>核心理念：</strong>以單一固定式攝影機為輸入來源，整合深度學習偵測、紋理分類與物理幾何推導，將傳統仰賴人工經驗的浪況判讀轉化為可量化、可視覺化的客觀指標，減少衝浪的事前準備時間以及讓衝浪人士依據不同浪況選擇浪板。</p>
                 
-                <div style="margin-bottom: 20px;">
-                    <strong style="color: #333; font-size: 1rem;">技術棧 (Technology Stack)</strong>
-                    <ul style="margin-top: 8px; padding-left: 20px; color: #666; font-size: 0.95rem; line-height: 1.6;">
+                <div class="tech-stack">
+                    <strong>技術棧 (Technology Stack)</strong>
+                    <ul>
                         <li><strong>物件偵測與追蹤：</strong>RT-DETR、Multi-Object Tracking</li>
                         <li><strong>影像處理與分類：</strong>OpenCV、SVC (Polynomial Kernel)、ThunderSVM</li>
                         <li><strong>深度與幾何估測：</strong>單目視覺幾何推導、相機姿態修正</li>
                     </ul>
                 </div>
 
-                <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">專題製作</p>
-                
-                <a>專題尚在製作</a>
+                <p class="note">專題製作</p>
+                <a href="#">專題尚在製作</a>
             </div>
 
             <div class="project-card">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px;">
-                    <h3 style="margin-bottom: 0;">AI問答助理</h3>
-                    <span style="color: #666; font-size: 0.9rem;">2025/4~2025/6</span>
+                <div class="project-header">
+                    <h3>AI問答助理</h3>
+                    <span>2025/4~2025/6</span>
                 </div>
                 
-                <p style="margin-bottom: 10px;"><strong>專案定位：</strong>基於行動端與雲端 AI 整合的智慧對話系統，結合語音辨識與大型語言模型，打造即時互動式問答平台。</p>
-                <p style="margin-bottom: 15px;"><strong>核心理念：</strong>透過 Flutter 跨平台應用結合 TCP 伺服器架構，整合語音輸入、語音輸出與雲端 LLM 服務。</p>
+                <p><strong>專案定位：</strong>基於行動端與雲端 AI 整合的智慧對話系統，結合語音辨識與大型語言模型，打造即時互動式問答平台。</p>
+                <p><strong>核心理念：</strong>透過 Flutter 跨平台應用結合 TCP 伺服器架構，整合語音輸入、語音輸出與雲端 LLM 服務。</p>
                 
-                <div style="margin-bottom: 20px;">
-                    <strong style="color: #333; font-size: 1rem;">技術棧 (Technology Stack)</strong>
-                    <ul style="margin-top: 8px; padding-left: 20px; color: #666; font-size: 0.95rem; line-height: 1.6;">
+                <div class="tech-stack">
+                    <strong>技術棧 (Technology Stack)</strong>
+                    <ul>
                         <li><strong>行動端 (Mobile)：</strong>Flutter、Dart</li>
                         <li><strong>伺服器端 (Server)：</strong>Dart TCP Server、HTTPS</li>
                         <li><strong>API：</strong>Groq API</li>
@@ -268,25 +109,27 @@
 
                 <a href="https://drive.google.com/file/d/14Ai0d8TJOXYq49Kpt0e-Hpw5b19LM4pi/view" target="_blank">作品展示連結 →</a>
             </div>
+
             <div class="project-card">
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px;">
-                    <h3 style="margin-bottom: 0;">即時交通速限辨識與語音輔助系統</h3>
-                    <span style="color: #666; font-size: 0.9rem;">2025/10~2025/12</span>
+                <div class="project-header">
+                    <h3>即時交通速限辨識與語音輔助系統</h3>
+                    <span>2025/10~2025/12</span>
                 </div>
 
-                <p style="margin-bottom: 10px;"><strong>專案定位：</strong>結合邊緣運算與行動裝置的「智慧駕駛輔助」系統。</p>
-                <p style="margin-bottom: 15px;"><strong>核心理念：</strong>透過部署於樹莓派的 YOLO 視覺辨識模型，即時偵測道路速限標誌，並利用低功耗藍牙（BLE）將數據推播至 Flutter App，提供視覺化儀表與 TTS 語音提醒，確保駕駛行車安全。</p>
+                <p><strong>專案定位：</strong>結合邊緣運算與行動裝置的「智慧駕駛輔助」系統。</p>
+                <p><strong>核心理念：</strong>透過部署於樹莓派的 YOLO 視覺辨識模型，即時偵測道路速限標誌，並利用低功耗藍牙（BLE）將數據推播至 Flutter App，提供視覺化儀表與 TTS 語音提醒，確保駕駛行車安全。</p>
                 
-                <div style="margin-bottom: 20px;">
-                    <strong style="color: #333; font-size: 1rem;">技術棧 (Technology Stack)</strong>
-                    <ul style="margin-top: 8px; padding-left: 20px; color: #666; font-size: 0.95rem; line-height: 1.6;">
+                <div class="tech-stack">
+                    <strong>技術棧 (Technology Stack)</strong>
+                    <ul>
                         <li><strong>行動端 (Mobile):</strong> Flutter, Dart, FlutterTts</li>
                         <li><strong>硬體與嵌入式 (Embedded):</strong> Raspberry Pi, multi-thread, OpenCV, python</li>
                         <li><strong>通訊與介面:</strong> BlueZ, DBus</li>
                         <li><strong>模型:</strong> YOLOv8 (ONNX)</li>
                     </ul>
                 </div>
-                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+
+                <div class="project-links">
                     <a href="https://github.com/andyyoung1219/embedding_system_final_app" target="_blank">GitHub (手機端) →</a>
                     <a href="https://github.com/andyyoung1219/embedding_system_final_server" target="_blank">GitHub (嵌入式系統端) →</a>
                     <a href="https://drive.google.com/file/d/1LbbQQx0Iv7OCLEKB8GEcp9v1pJ_5335z/view" target="_blank">作品展示連結 →</a>
@@ -302,5 +145,6 @@
         <p>Email: <a href="mailto:andyyoung1219@gmail.com">andyyoung1219@gmail.com</a></p>
     </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
