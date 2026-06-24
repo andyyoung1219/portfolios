@@ -176,8 +176,18 @@ h2 {
 }
 
 .note {
-    font-size: 0.9rem;
-    color: #555;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+
+  color: #7a5a12;
+  background: rgba(255, 193, 7, 0.14);
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .project-links {
