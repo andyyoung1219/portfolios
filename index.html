@@ -3,151 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>個人作品集</title>
+    <meta name="description" content="楊智皓的資訊工程研究所推甄作品集，聚焦電腦視覺、機器學習、邊緣運算與智慧系統整合。">
+    <title>楊智皓｜資訊工程研究所推甄作品集</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">安迪作品集</div>
-            <ul>
+    <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+    <header class="site-header">
+        <nav class="nav-container" aria-label="主要導覽">
+            <a class="logo" href="#about" aria-label="返回首頁">
+                <span class="logo-mark">Y</span>
+                <span>楊智皓</span>
+            </a>
+            <ul class="nav-links">
                 <li><a href="#about">關於我</a></li>
-                <li><a href="#projects">專案經歷</a></li>
+                <li><a href="#interests">研究興趣</a></li>
+                <li><a href="#projects">專案成果</a></li>
                 <li><a href="#contact">聯絡方式</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero" id="about">
-        <h1>您好，我是楊智皓</h1>
-        <h3>目前就讀國立臺北大學 資訊工程學系</h3>
-    </section>
+    <main id="main-content">
+        <section class="hero" id="about">
+            <div class="hero-content">
+                <p class="eyebrow">Graduate School Application Portfolio</p>
+                <h1>楊智皓</h1>
+                <p class="hero-title">資訊工程研究所推甄作品集</p>
+                <p class="hero-intro">
+                    國立臺北大學資訊工程學系學生，關注電腦視覺、機器學習與邊緣智慧。
+                    我希望將演算法落實於真實場域，從問題定義、模型設計到軟硬體整合，建立可驗證且能實際運作的智慧系統。
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">查看專案成果</a>
+                    <a class="button button-secondary" href="mailto:andyyoung1219@gmail.com">與我聯絡</a>
+                </div>
+            </div>
 
-    <section>
-        <h2>技術應用</h2>
-        <div class="skills-container">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">Flutter</span>
-            <span class="skill-tag">Embedded System</span>
-            <span class="skill-tag">Deep / Machine Learning</span>
-            <span class="skill-tag">Computer Vision</span>
-        </div>
-    </section>
+            <aside class="profile-panel" aria-label="個人摘要">
+                <p class="profile-label">PROFILE</p>
+                <dl class="profile-list">
+                    <div>
+                        <dt>就讀學校</dt>
+                        <dd>國立臺北大學</dd>
+                    </div>
+                    <div>
+                        <dt>就讀科系</dt>
+                        <dd>資訊工程學系</dd>
+                    </div>
+                    <div>
+                        <dt>研究關注</dt>
+                        <dd>Computer Vision · Edge AI</dd>
+                    </div>
+                    <div>
+                        <dt>核心能力</dt>
+                        <dd>模型應用 · 系統整合 · 實作驗證</dd>
+                    </div>
+                </dl>
+            </aside>
+        </section>
 
-    <section id="projects">
-        <h2>專案經歷</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-header">
+        <section class="section" id="interests">
+            <div class="section-heading">
+                <div>
+                    <p class="section-kicker">RESEARCH INTERESTS</p>
+                    <h2>研究興趣與能力主軸</h2>
+                </div>
+                <p>從影像理解延伸至邊緣裝置部署，著重模型、感測與應用系統之間的完整串接。</p>
+            </div>
+
+            <div class="interest-grid">
+                <article class="interest-card">
+                    <span class="interest-number">01</span>
+                    <h3>電腦視覺</h3>
+                    <p>關注物件偵測、多目標追蹤、影像分類與單目幾何估測，將視覺資訊轉換為可量化的環境指標。</p>
+                </article>
+                <article class="interest-card">
+                    <span class="interest-number">02</span>
+                    <h3>機器學習與邊緣 AI</h3>
+                    <p>探索深度學習及傳統機器學習方法，並將模型部署至 Jetson TX2、Raspberry Pi 等資源受限平台。</p>
+                </article>
+                <article class="interest-card">
+                    <span class="interest-number">03</span>
+                    <h3>智慧系統整合</h3>
+                    <p>整合感測器、通訊協定與行動應用，建立能在真實情境中即時回應的端到端系統。</p>
+                </article>
+            </div>
+
+            <div class="skills-row" aria-label="技術能力">
+                <span>Python</span>
+                <span>C++</span>
+                <span>OpenCV</span>
+                <span>Flutter / Dart</span>
+                <span>Deep Learning</span>
+                <span>Machine Learning</span>
+                <span>Embedded Systems</span>
+            </div>
+        </section>
+
+        <section class="section projects-section" id="projects">
+            <div class="section-heading">
+                <div>
+                    <p class="section-kicker">SELECTED PROJECTS</p>
+                    <h2>專案成果</h2>
+                </div>
+                <p>以實際問題為起點，記錄所採用的方法、工程實作與成果佐證。</p>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card project-card-featured">
+                    <div class="project-topline">
+                        <span class="project-index">01</span>
+                        <span class="project-type">代表專題 · Computer Vision</span>
+                        <time datetime="2025-09">2025.09 — 2026.06</time>
+                    </div>
                     <h3>智慧衝浪海域分析系統</h3>
-                    <span>2025/9~2026/6/17</span>
-                </div>
-                
-                <p><strong>專案定位：</strong>結合電腦視覺與單目幾何估測的智慧海浪分析方案，透過影像自動化偵測與量化模型，提供區域級浪況判讀與決策輔助。</p>
-                <p><strong>核心理念：</strong>以單一固定式攝影機為輸入來源，整合深度學習偵測、紋理分類與物理幾何推導，將傳統仰賴人工經驗的浪況判讀轉化為可量化、可視覺化的客觀指標，減少衝浪的事前準備時間以及讓衝浪人士依據不同浪況選擇浪板。</p>
-                
-                <div class="tech-stack">
-                    <strong>技術棧 (Technology Stack)</strong>
-                    <ul>
-                        <li><strong>物件偵測與追蹤：</strong>RT-DETR、Multi-Object Tracking</li>
-                        <li><strong>影像處理與分類：</strong>OpenCV、SVC (Polynomial Kernel)、ThunderSVM</li>
-                        <li><strong>深度與幾何估測：</strong>單目視覺幾何推導、相機姿態修正</li>
-                    </ul>
-                </div>
+                    <p class="project-lead">結合電腦視覺與單目幾何估測，將海浪影像轉換為可量化、可視覺化的區域級浪況指標。</p>
 
-                <p class="note">🏆 校內專題比賽第一名</p>
-                <div class="project-links">
-                    <a href="https://drive.google.com/file/d/1PEKkUunEcwnZuGjHz_JeK5zzL0EdOkw8/view?usp=sharing" target="_blank">宣傳影片 →</a>
-                    <a href="https://drive.google.com/file/d/1KOmdDDnunx5ZKq-dutvJZgiLm_ckE_xq/view?usp=sharing" target="_blank">簡報 →</a>
-                </div>
-            </div>
-        
-            <div class="project-card">
-                <div class="project-header">
+                    <div class="project-details">
+                        <div>
+                            <h4>問題與目標</h4>
+                            <p>傳統浪況判讀高度依賴人工經驗。本專題以單一固定式攝影機為輸入，目標是自動偵測海浪並提供客觀的浪況分析，協助使用者縮短事前準備時間及選擇合適浪板。</p>
+                        </div>
+                        <div>
+                            <h4>方法與實作</h4>
+                            <p>整合 RT-DETR、多目標追蹤、OpenCV、SVC 紋理分類與單目視覺幾何推導，並納入相機姿態修正以提升估測可靠性。</p>
+                        </div>
+                    </div>
+
+                    <div class="project-tags" aria-label="使用技術">
+                        <span>RT-DETR</span><span>Multi-Object Tracking</span><span>OpenCV</span>
+                        <span>SVC</span><span>ThunderSVM</span><span>Monocular Geometry</span>
+                    </div>
+
+                    <div class="project-footer">
+                        <p class="achievement">
+                            <button class="certificate-trigger" type="button" aria-haspopup="dialog"
+                                    data-certificate-src="asset/專題獎狀.JPG"
+                                    data-certificate-alt="校內專題比賽第一名獎狀">
+                                <span aria-hidden="true">🏆</span> 校內專題比賽第一名 <span class="view-hint">查看獎狀</span>
+                            </button>
+                        </p>
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/1PEKkUunEcwnZuGjHz_JeK5zzL0EdOkw8/view?usp=sharing" target="_blank" rel="noopener noreferrer">宣傳影片 <span>↗</span></a>
+                            <a href="https://drive.google.com/file/d/1KOmdDDnunx5ZKq-dutvJZgiLm_ckE_xq/view?usp=sharing" target="_blank" rel="noopener noreferrer">海報 <span>↗</span></a>
+                            <a href="https://www.csie.ntpu.edu.tw/uploads/file/f1_202606101505101064.pdf" target="_blank" rel="noopener noreferrer">報告書 <span>↗</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-topline">
+                        <span class="project-index">02</span>
+                        <span class="project-type">Edge AI · Mobile</span>
+                        <time datetime="2025-06">2025.06 — 2025.09</time>
+                    </div>
                     <h3>摩托車安全輔助系統</h3>
-                    <span>2025/6~2025/9</span>
-                </div>
+                    <p class="project-lead">結合 Jetson TX2 邊緣運算與 Flutter 行動應用，在原有導航情境中即時提供道路環境警示。</p>
 
-                <p><strong>專案定位：</strong>結合邊緣運算與行動應用的「伴隨式」導航安全整合方案。</p>
-                <p><strong>核心理念：</strong>在不改變使用者原導航習慣下，透過背景運行的 Flutter App 結合 Jetson TX2 邊緣運算，即時疊加環境偵測警示，提升騎乘安全性。</p>
-                
-                <div class="tech-stack">
-                    <strong>技術棧 (Technology Stack)</strong>
-                    <ul>
-                        <li><strong>行動端 (Mobile):</strong> Flutter, Dart, Google Maps API, Google Directions/Geocoding API.</li>
-                        <li><strong>硬體與嵌入式 (Embedded):</strong> NVIDIA Jetson TX2, LED, Threading, TFMini-S LiDAR, Python.</li>
-                        <li><strong>通訊與介面:</strong> Bluetooth SPP (Serial Port Profile), OpenCV 4.5.0, Flutter Overlay Window (懸浮視窗).</li>
-                        <li><strong>模型：</strong> YOLOv11</li>
-                    </ul>
-                </div>
+                    <div class="project-details">
+                        <div>
+                            <h4>系統設計</h4>
+                            <p>以「不改變既有導航習慣」為核心，透過背景運行 App、懸浮視窗及視覺模型，提供伴隨式安全提醒。</p>
+                        </div>
+                        <div>
+                            <h4>工程整合</h4>
+                            <p>串接 YOLOv11、TFMini-S LiDAR、Bluetooth SPP、Google Maps API 與多執行緒處理，完成行動端及嵌入式端整合。</p>
+                        </div>
+                    </div>
 
-                <p class="note">參與2025全國大專校院智慧創新暨跨域整合創作競賽</p>
-                
-                <div class="project-links">
-                    <a href="https://github.com/andyyoung1219/motorcycle_safety" target="_blank">GitHub (手機端) →</a>
-                    <a href="https://github.com/andyyoung1219/TX2_motorSafe" target="_blank">GitHub (嵌入式系統端) →</a>
-                    <a href="https://drive.google.com/file/d/1EOj0M2uCLQ0XUI0pBTJ7t1hv_ZR8g9AK/view" target="_blank">作品展示連結 →</a>
-                </div>
-            </div>
+                    <div class="project-tags" aria-label="使用技術">
+                        <span>YOLOv11</span><span>Jetson TX2</span><span>Flutter</span>
+                        <span>LiDAR</span><span>Bluetooth SPP</span><span>OpenCV</span>
+                    </div>
 
+                    <div class="project-footer">
+                        <p class="achievement">
+                            <button class="certificate-trigger" type="button" aria-haspopup="dialog"
+                                    data-certificate-src="asset/70063_attendanceCertification_page-0001.jpg"
+                                    data-certificate-alt="2025全國大專校院智慧創新暨跨域整合創作競賽參賽證明">
+                                參與 2025 全國大專校院智慧創新暨跨域整合創作競賽 <span class="view-hint">查看證明</span>
+                            </button>
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/andyyoung1219/motorcycle_safety" target="_blank" rel="noopener noreferrer">手機端 GitHub <span>↗</span></a>
+                            <a href="https://github.com/andyyoung1219/TX2_motorSafe" target="_blank" rel="noopener noreferrer">嵌入式端 GitHub <span>↗</span></a>
+                            <a href="https://drive.google.com/file/d/1EOj0M2uCLQ0XUI0pBTJ7t1hv_ZR8g9AK/view" target="_blank" rel="noopener noreferrer">作品展示 <span>↗</span></a>
+                        </div>
+                    </div>
+                </article>
 
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>AI問答助理</h3>
-                    <span>2025/4~2025/6</span>
-                </div>
-                
-                <p><strong>專案定位：</strong>基於行動端與雲端 AI 整合的智慧對話系統，結合語音辨識與大型語言模型，打造即時互動式問答平台。</p>
-                <p><strong>核心理念：</strong>透過 Flutter 跨平台應用結合 TCP 伺服器架構，整合語音輸入、語音輸出與雲端 LLM 服務。</p>
-                
-                <div class="tech-stack">
-                    <strong>技術棧 (Technology Stack)</strong>
-                    <ul>
-                        <li><strong>行動端 (Mobile)：</strong>Flutter、Dart</li>
-                        <li><strong>伺服器端 (Server)：</strong>Dart TCP Server、HTTPS</li>
-                        <li><strong>API：</strong>Groq API</li>
-                        <li><strong>通訊架構：</strong>TCP Socket 通訊、Client-Server 架構</li>
-                    </ul>
-                </div>
+                <article class="project-card">
+                    <div class="project-topline">
+                        <span class="project-index">03</span>
+                        <span class="project-type">LLM · Client–Server</span>
+                        <time datetime="2025-04">2025.04 — 2025.06</time>
+                    </div>
+                    <h3>AI 問答助理</h3>
+                    <p class="project-lead">整合行動端、語音互動與雲端大型語言模型服務，打造即時互動式問答系統。</p>
 
-                <a href="https://drive.google.com/file/d/14Ai0d8TJOXYq49Kpt0e-Hpw5b19LM4pi/view" target="_blank">作品展示連結 →</a>
-            </div>
+                    <div class="project-details">
+                        <div>
+                            <h4>系統架構</h4>
+                            <p>採用 Flutter 跨平台應用與 Dart TCP Server，建立 Client–Server 架構並串接雲端 LLM 服務。</p>
+                        </div>
+                        <div>
+                            <h4>互動流程</h4>
+                            <p>整合語音輸入、文字問答與語音輸出，完成從使用者請求到模型回應的完整通訊流程。</p>
+                        </div>
+                    </div>
 
-            <div class="project-card">
-                <div class="project-header">
+                    <div class="project-tags" aria-label="使用技術">
+                        <span>Flutter</span><span>Dart</span><span>TCP Socket</span>
+                        <span>Groq API</span><span>HTTPS</span><span>LLM</span>
+                    </div>
+
+                    <div class="project-footer project-footer-links-only">
+                        <div class="project-links">
+                            <a href="https://drive.google.com/file/d/14Ai0d8TJOXYq49Kpt0e-Hpw5b19LM4pi/view" target="_blank" rel="noopener noreferrer">作品展示 <span>↗</span></a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-topline">
+                        <span class="project-index">04</span>
+                        <span class="project-type">Embedded Vision · BLE</span>
+                        <time datetime="2025-10">2025.10 — 2025.12</time>
+                    </div>
                     <h3>即時交通速限辨識與語音輔助系統</h3>
-                    <span>2025/10~2025/12</span>
-                </div>
+                    <p class="project-lead">在 Raspberry Pi 上執行道路速限標誌辨識，並將結果即時推播至手機端提供視覺與語音提醒。</p>
 
-                <p><strong>專案定位：</strong>結合邊緣運算與行動裝置的「智慧駕駛輔助」系統。</p>
-                <p><strong>核心理念：</strong>透過部署於樹莓派的 YOLO 視覺辨識模型，即時偵測道路速限標誌，並利用低功耗藍牙（BLE）將數據推播至 Flutter App，提供視覺化儀表與 TTS 語音提醒，確保駕駛行車安全。</p>
-                
-                <div class="tech-stack">
-                    <strong>技術棧 (Technology Stack)</strong>
-                    <ul>
-                        <li><strong>行動端 (Mobile):</strong> Flutter, Dart, FlutterTts</li>
-                        <li><strong>硬體與嵌入式 (Embedded):</strong> Raspberry Pi, multi-thread, OpenCV, python</li>
-                        <li><strong>通訊與介面:</strong> BlueZ, DBus</li>
-                        <li><strong>模型:</strong> YOLOv8 (ONNX)</li>
-                    </ul>
-                </div>
+                    <div class="project-details">
+                        <div>
+                            <h4>邊緣辨識</h4>
+                            <p>將 YOLOv8 轉換為 ONNX 格式部署於 Raspberry Pi，以 OpenCV 與多執行緒完成即時影像處理。</p>
+                        </div>
+                        <div>
+                            <h4>裝置通訊</h4>
+                            <p>透過 BlueZ、D-Bus 與 BLE 傳輸辨識結果，Flutter App 則以視覺化儀表及 TTS 提醒駕駛。</p>
+                        </div>
+                    </div>
 
-                <div class="project-links">
-                    <a href="https://github.com/andyyoung1219/embedding_system_final_app" target="_blank">GitHub (手機端) →</a>
-                    <a href="https://github.com/andyyoung1219/embedding_system_final_server" target="_blank">GitHub (嵌入式系統端) →</a>
-                    <a href="https://drive.google.com/file/d/1LbbQQx0Iv7OCLEKB8GEcp9v1pJ_5335z/view" target="_blank">作品展示連結 →</a>
-                </div>
+                    <div class="project-tags" aria-label="使用技術">
+                        <span>YOLOv8 ONNX</span><span>Raspberry Pi</span><span>OpenCV</span>
+                        <span>BLE</span><span>BlueZ / D-Bus</span><span>Flutter TTS</span>
+                    </div>
+
+                    <div class="project-footer project-footer-links-only">
+                        <div class="project-links">
+                            <a href="https://github.com/andyyoung1219/embedding_system_final_app" target="_blank" rel="noopener noreferrer">手機端 GitHub <span>↗</span></a>
+                            <a href="https://github.com/andyyoung1219/embedding_system_final_server" target="_blank" rel="noopener noreferrer">嵌入式端 GitHub <span>↗</span></a>
+                            <a href="https://drive.google.com/file/d/1LbbQQx0Iv7OCLEKB8GEcp9v1pJ_5335z/view" target="_blank" rel="noopener noreferrer">作品展示 <span>↗</span></a>
+                        </div>
+                    </div>
+                </article>
             </div>
-        </div> 
-    </section>
+        </section>
 
-    <section class="contact" id="contact">
-        <h2>聯絡我</h2>
-        <p>目前正在尋找軟體開發、嵌入式系統與 AI / ML 相關的實習機會。如果您對我的經歷感興趣，歡迎隨時與我聯繫！</p>
-        <br>
-        <p>Email: <a href="mailto:andyyoung1219@gmail.com">andyyoung1219@gmail.com</a></p>
-    </section>
+        <section class="section direction-section" aria-labelledby="direction-title">
+            <p class="section-kicker">ACADEMIC DIRECTION</p>
+            <h2 id="direction-title">進修方向</h2>
+            <p>
+                希望在研究所階段深化電腦視覺與機器學習的理論基礎，持續探索模型在真實環境中的可靠性、效率與部署方法，
+                並累積從研究問題定義、實驗設計到系統驗證的完整能力。
+            </p>
+        </section>
+
+        <section class="section contact" id="contact">
+            <div>
+                <p class="section-kicker">CONTACT</p>
+                <h2>聯絡方式</h2>
+                <p>若您希望進一步了解我的專題內容、技術實作或研究興趣，歡迎與我聯繫。</p>
+            </div>
+            <a class="contact-link" href="mailto:andyyoung1219@gmail.com">
+                <span>Email</span>
+                andyyoung1219@gmail.com
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>楊智皓 · Graduate School Application Portfolio</p>
+    </footer>
+
+    <div class="certificate-modal" role="dialog" aria-modal="true" aria-label="獎項證明" hidden>
+        <div class="certificate-modal__content">
+            <button class="certificate-modal__close" type="button" aria-label="關閉圖片">×</button>
+            <img src="asset/專題獎狀.JPG" alt="校內專題比賽第一名獎狀">
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
