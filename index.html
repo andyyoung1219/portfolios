@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="楊智皓的資訊工程研究所推甄作品集，聚焦電腦視覺、機器學習、邊緣運算與智慧系統整合。">
+    <meta name="description" content="楊智皓的資訊工程研究所推甄作品集，聚焦電腦視覺與智慧應用系統，呈現海浪分析、智慧交通與系統整合的實作經驗。">
     <title>楊智皓｜資訊工程研究所推甄作品集</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -32,8 +32,8 @@
                 <h1>楊智皓</h1>
                 <p class="hero-title">資訊工程研究所推甄作品集</p>
                 <p class="hero-intro">
-                    國立臺北大學資訊工程學系學生，關注電腦視覺、機器學習與邊緣智慧。
-                    我希望將演算法落實於真實場域，從問題定義、模型設計到軟硬體整合，建立可驗證且能實際運作的智慧系統。
+                    國立臺北大學資訊工程學系學生，研究興趣為電腦視覺與智慧應用系統。
+                    曾修習電腦視覺、影像處理、人工智慧、嵌入式系統與軟體工程等課程，並將所學應用於海浪分析與智慧交通專案，累積影像辨識、行動 App 開發與雲端串接的實作經驗。
                 </p>
                 <div class="hero-actions">
                     <a class="button button-primary" href="#projects">查看專案成果</a>
@@ -53,12 +53,8 @@
                         <dd>資訊工程學系</dd>
                     </div>
                     <div>
-                        <dt>研究關注</dt>
-                        <dd>Computer Vision · Edge AI</dd>
-                    </div>
-                    <div>
-                        <dt>核心能力</dt>
-                        <dd>模型應用 · 系統整合 · 實作驗證</dd>
+                        <dt>研究興趣</dt>
+                        <dd>電腦視覺 · 智慧應用系統</dd>
                     </div>
                 </dl>
             </aside>
@@ -70,7 +66,7 @@
                     <p class="section-kicker">RESEARCH INTERESTS</p>
                     <h2>研究興趣與能力主軸</h2>
                 </div>
-                <p>從影像理解延伸至邊緣裝置部署，著重模型、感測與應用系統之間的完整串接。</p>
+                <p>以電腦視覺與智慧應用系統為主軸，整合影像分析、行動應用與雲端服務，將辨識結果轉化為實際可用的資訊。</p>
             </div>
 
             <div class="interest-grid">
@@ -81,13 +77,13 @@
                 </article>
                 <article class="interest-card">
                     <span class="interest-number">02</span>
-                    <h3>機器學習與邊緣 AI</h3>
-                    <p>探索深度學習及傳統機器學習方法，並將模型部署至 Jetson TX2、Raspberry Pi 等資源受限平台。</p>
+                    <h3>智慧應用系統</h3>
+                    <p>結合人工智慧、嵌入式裝置與軟體開發，應用於海浪分析與智慧交通，透過網頁或行動 App 呈現分析結果與即時提醒。</p>
                 </article>
                 <article class="interest-card">
                     <span class="interest-number">03</span>
-                    <h3>智慧系統整合</h3>
-                    <p>整合感測器、通訊協定與行動應用，建立能在真實情境中即時回應的端到端系統。</p>
+                    <h3>軟體與系統整合</h3>
+                    <p>透過 Flutter App 開發、Firebase 串接與裝置通訊，整合影像辨識結果及使用者介面，累積跨平台開發與問題解決經驗。</p>
                 </article>
             </div>
 
@@ -118,7 +114,7 @@
                         <span class="project-type">代表專題 · Computer Vision</span>
                         <time datetime="2025-09">2025.09 — 2026.06</time>
                     </div>
-                    <h3>智慧衝浪海域分析系統</h3>
+                    <h3>浪我看看：智慧衝浪海域分析系統</h3>
                     <p class="project-lead">結合電腦視覺與單目幾何估測，將海浪影像轉換為可量化、可視覺化的區域級浪況指標。</p>
 
                     <div class="project-details">
@@ -128,13 +124,17 @@
                         </div>
                         <div>
                             <h4>方法與實作</h4>
-                            <p>整合 RT-DETR、多目標追蹤、OpenCV、SVC 紋理分類與單目視覺幾何推導，並納入相機姿態修正以提升估測可靠性。</p>
+                            <p>利用 RT-DETR 與 BoT-SORT 偵測並追蹤海浪，結合 SVC 紋理分類、單目視覺幾何與決策樹模型，估算浪高、辨識捲浪並劃分海域。分析結果上傳至 Firebase，以網頁視覺化呈現即時浪況。</p>
+                        </div>
+                        <div>
+                            <h4>負責內容</h4>
+                            <p>資料集建制、海浪偵測與追蹤、浪花判斷處理、Firebase 串接與海域分區。</p>
                         </div>
                     </div>
 
                     <div class="project-tags" aria-label="使用技術">
-                        <span>RT-DETR</span><span>Multi-Object Tracking</span><span>OpenCV</span>
-                        <span>SVC</span><span>ThunderSVM</span><span>Monocular Geometry</span>
+                        <span>RT-DETR</span><span>BoT-SORT</span><span>OpenCV</span>
+                        <span>SVC</span><span>ThunderSVM</span><span>Monocular Geometry</span><span>Firebase</span>
                     </div>
 
                     <div class="project-footer">
@@ -156,11 +156,11 @@
                 <article class="project-card">
                     <div class="project-topline">
                         <span class="project-index">02</span>
-                        <span class="project-type">Edge AI · Mobile</span>
+                        <span class="project-type">智慧應用系統 · 行動應用</span>
                         <time datetime="2025-06">2025.06 — 2025.09</time>
                     </div>
                     <h3>摩托車安全輔助系統</h3>
-                    <p class="project-lead">結合 Jetson TX2 邊緣運算與 Flutter 行動應用，在原有導航情境中即時提供道路環境警示。</p>
+                    <p class="project-lead">結合 Jetson TX2 影像辨識與 Flutter 行動應用，偵測兩段式左轉告示牌，並在原有導航情境中即時提醒騎士。</p>
 
                     <div class="project-details">
                         <div>
@@ -170,6 +170,10 @@
                         <div>
                             <h4>工程整合</h4>
                             <p>串接 YOLOv11、TFMini-S LiDAR、Bluetooth SPP、Google Maps API 與多執行緒處理，完成行動端及嵌入式端整合。</p>
+                        </div>
+                        <div>
+                            <h4>負責內容</h4>
+                            <p>Jetson TX2 端影像辨識與 Flutter App 開發。</p>
                         </div>
                     </div>
 
@@ -260,15 +264,6 @@
                     </div>
                 </article>
             </div>
-        </section>
-
-        <section class="section direction-section" aria-labelledby="direction-title">
-            <p class="section-kicker">ACADEMIC DIRECTION</p>
-            <h2 id="direction-title">進修方向</h2>
-            <p>
-                希望在研究所階段深化電腦視覺與機器學習的理論基礎，持續探索模型在真實環境中的可靠性、效率與部署方法，
-                並累積從研究問題定義、實驗設計到系統驗證的完整能力。
-            </p>
         </section>
 
         <section class="section contact" id="contact">
